@@ -13,7 +13,7 @@ function din_add_nav_item(){
 	// create the query
 	$args = array(
 		'post_type'                 => $doc->post_type_name,
-		'post_status'               => 'published',
+		'post_status'               => 'publish',
 		$doc->associated_item_tax_name   => $doc->item_slug,
 		'bp_docs_tag'					=> get_option('din_tag_name'),
 		'posts_per_page'            => 1,
