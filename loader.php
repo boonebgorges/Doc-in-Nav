@@ -4,7 +4,7 @@ Plugin Name: Buddypress Doc in Nav
 Author: Sven Lehnert
 Author URL: http://themekraft.com
 Description: This small plugin adds an option to the BuddyPress Docs plugin to select a tag and display the last post from this tag as a group nav item
-Version: 0.1
+Version: 0.2
 */
 
 
