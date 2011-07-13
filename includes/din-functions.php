@@ -6,8 +6,11 @@ function din_add_nav_item(){
 	if ( $bp->current_component != $bp->groups->slug )
 		return false;
 	
-	$doc = new BP_Docs_Query;
+	if ( !class_exists('BP_Docs_Query'))
+		return false;
 	
+	$doc = new BP_Docs_Query;
+		
 	$groups_slug = !empty( $bp->groups->root_slug ) ? $bp->groups->root_slug : $bp->groups->slug;
 
 	// create the query
@@ -48,7 +51,11 @@ function din_create_menu() {
 	if ( !is_site_admin() )
 		return false;
 
+	if ( !class_exists('BP_Docs_Query'))
+		return false;
+		
 	$doc = new BP_Docs_Query;
+	
 	//create new top-level menu
 	add_submenu_page('edit.php?post_type='.$doc->post_type_name, 'Options', 'Options', 'manage_options', $doc->post_type_name.'-options', 'din_settings_page' ); 
 	
